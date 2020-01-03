@@ -11,7 +11,7 @@ API_KEY = os.environ['NEWS_API_KEY']
 # Returns a JSON list, which contains the details for each article
 def get_results():
     url = 'https://newsapi.org/v2/everything'
-    res = requests.get(url, {'apiKey':API_KEY, 'q': 'Android OR Open Source OR Linux'})
+    res = requests.get(url, {'apiKey':API_KEY, 'q': 'Android OR Open-Source OR Linux'})
     return json.loads(res.content)['articles']
 
 
